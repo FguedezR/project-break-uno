@@ -29,4 +29,4 @@ function cambiarFondo() {
 cambiarFondo();
 
 // configurar el intervalo 15s
-setInterval(cambiarFondo, 10000);
+setInterval(cambiarFondo, 15000);
