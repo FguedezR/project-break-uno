@@ -38,8 +38,7 @@ Un reloj que muestra la hora local actualizándose en tiempo real.
 
 El proyecto sigue una estructura organizada para separar los recursos y los sub-proyectos:
 
-`bash
-project-break-uno/
+```roject-break-uno/
 │
 ├── index.html          # Dashboard Principal
 ├── style.css           # Estilos globales
@@ -51,10 +50,4 @@ project-break-uno/
         ├── estacion-clima/
         ├── gen-contrasena/
         ├── generador-enlaces/
-        └── reloj-digital/
-`
-`git clone https://github.com/FguedezR/project-break-uno.git`
-
-`cd project-break-uno`
-
-GitHub: @FguedezR
+          └── reloj-digital/
