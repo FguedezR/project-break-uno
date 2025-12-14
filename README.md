@@ -1,28 +1,60 @@
-# 🌦️ Aplicación de Pronóstico del Clima
+# 🚀 Project Break Uno - Dashboard de Proyectos
 
-## 📜 Descripción del Proyecto
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-> Esta es una aplicación web frontend simple diseñada para mostrar las condiciones climáticas actuales y un pronóstico detallado por horas para una ciudad específica (Madrid, por defecto).
-> El proyecto se enfoca en demostrar las mejores prácticas en JavaScript asíncrono, la manipulación eficiente del DOM y el uso del método map() para el renderizado de listas de datos.
+Bienvenido a mi primer Dashboard de proyectos web. Este repositorio agrupa cuatro herramientas interactivas desarrolladas con **Vanilla JavaScript**, enfocadas en la manipulación del DOM, consumo de APIs y persistencia de datos.
 
-## 🚀 Características PrincipalesDatos Asíncronos:
+## 🔗 Demo en Vivo
+¡Puedes probar el proyecto funcionando en el siguiente enlace!
+👉 **[Ver Project Break Uno en GitHub Pages](https://fguedezr.github.io/project-break-uno/)**
 
-Utiliza la API de WeatherAPI mediante la sintaxis moderna async/await.
-**Doble Vista:** Muestra la información general del clima actual y un pronóstico horario (24 horas).Mapeo Robusto: La función de fetch combina y limpia los datos de la API antes de enviarlos al frontend.
+---
 
-**Renderizado Eficiente:** Uso de Template Literals y el método `map().join('')` para inyectar bloques de HTML de forma eficiente.🛠️ Tecnologías UtilizadasTecnologíaDescripciónHTML5Estructura base de la aplicación.CSS3Estilizado y presentación visual.JavaScript (ES6+)Lógica asíncrona (async/await, fetch), Destructuring y manipulación avanzada de Arrays (.map()).⚙️ Instalación y Uso1. RequisitosSolo necesitas un navegador web moderno (Chrome, Firefox, Edge, etc.) para ejecutar el proyecto.
+## 🛠️ Proyectos Incluidos
 
-2. Estructura de ArchivosAsegúrate de que tu proyecto tenga la siguiente estructura:
-`3. clima-app/
-├── index.html          # Estructura principal y contenedores del DOM.
-├── script.js           # Lógica principal, fetch, mapeo y renderizado.
-└── style.css           # Estilos para la presentación visual.`
+Desde el dashboard principal puedes navegar a las siguientes micro-aplicaciones:
 
-4. Configuración de la API Key⚠️ Advertencia de SeguridadLa API Key de WeatherAPI se encuentra actualmente expuesta en script.js. Para producción, es obligatorio implementar una solución de proxy backend (utilizando Node.js/Express, Vercel Serverless Function, etc.) para ocultar la clave y hacer la petición desde el servidor, no desde el navegador del cliente.4. EjecuciónSimplemente abre el archivo index.html en tu navegador. Los datos se cargarán automáticamente al iniciar la aplicación (DOMContentLoaded).
-5.🧱 Estructura del CódigofetchWeatherApi() (Lógica Asíncrona)Esta función es crucial ya que maneja la comunicación y limpieza de los datos.Endpoint: Utiliza /forecast.json para obtener tanto el clima actual como los datos horarios en una sola petición.Sintaxis: Implementa async/await dentro de un bloque try...catch para una gestión de errores clara.
+### 1. 🔒 Generador de Contraseñas Seguras
+Crea contraseñas aleatorias seguras permitiendo al usuario elegir la longitud (12-50 caracteres).
+- **Conceptos clave:** `Math.random()`, manipulación de Strings, Arrays, validaciones.
 
-Retorno: Devuelve un objeto unificado que contiene dos propiedades clave:JavaScript{
-  current: { /* datos del clima actual */ },
-  hourly: [ /* array de 24 pronósticos por hora */ ]
-}
-initApp() (Controlador de Arranque)El punto de entrada de la aplicación.Flujo de Datos: Utiliza await fetchWeatherApi() y destructuring para obtener directamente las propiedades { current, hourly }.Activación: Asegura que el código solo se ejecute cuando el HTML esté completamente cargado.renderWeather() y renderHourForecast() (Renderizado)renderWeather (Clima Actual): Recibe el objeto current y utiliza Template Literals para crear la tarjeta principal del clima.renderHourForecast (Pronóstico Horario): Recibe el array hourly y utiliza la siguiente secuencia para la inyección eficiente en el DOM:$$\text{Array} \xrightarrow{\text{map()}} \text{Array de strings HTML} \xrightarrow{\text{join('')}} \text{String HTML Único} \xrightarrow{\text{innerHTML}} \text{DOM}$$🤝 ContribucionesSi deseas mejorar este proyecto, puedes considerar las siguientes áreas:Implementar la solución de proxy backend para la API Key.Añadir un campo de búsqueda para que el usuario pueda ingresar la ciudad.Mejorar la experiencia de usuario con indicadores de carga (spinners).Desarrollado con 💙 y ☕ por [Tu Nombre/Alias de Desarrollador]
+### 2. 🔗 Gestor de Enlaces
+Una herramienta para guardar tus links favoritos. Permite añadir y eliminar enlaces dinámicamente.
+- **Conceptos clave:** `localStorage`, persistencia de datos, creación dinámica de elementos DOM.
+
+### 3. 🌤️ Estación Climática
+Muestra el clima actual y cambia el fondo de pantalla automáticamente con imágenes de alta calidad.
+- **Conceptos clave:** Consumo de APIs (Fetch), asincronía, `setInterval` para rotación de imágenes de fondo.
+
+### 4. ⏰ Reloj Digital
+Un reloj que muestra la hora local actualizándose en tiempo real.
+- **Conceptos clave:** Objeto `Date`, temporizadores (`setInterval`), lógica de formato de hora.
+
+---
+
+## 📂 Estructura del Proyecto
+
+El proyecto sigue una estructura organizada para separar los recursos y los sub-proyectos:
+
+`bash
+project-break-uno/
+│
+├── index.html          # Dashboard Principal
+├── style.css           # Estilos globales
+├── main.js             # Lógica del dashboard
+│
+└── assets/
+    ├── img/            # Iconos e imágenes globales
+    └── projects/       # Sub-carpetas de cada proyecto
+        ├── estacion-clima/
+        ├── gen-contrasena/
+        ├── generador-enlaces/
+        └── reloj-digital/
+`
+`git clone https://github.com/FguedezR/project-break-uno.git`
+
+`cd project-break-uno`
+
+GitHub: @FguedezR
