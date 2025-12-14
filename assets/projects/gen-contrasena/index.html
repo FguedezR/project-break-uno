@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/img/lock-favicon.png" type="image/x-icon">
+    <title>Generador de contraseñas</title>
+    <link rel="stylesheet" href="/assets/projects/gen-contrasena/style.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="/index.html">Home</a></h1>
+        <div class="icons">
+            <a href="/assets/projects/reloj-digital/index.html">
+                <img src="/assets/img/schedule-icon.svg" alt="">
+            </a>
+            <a href="/assets/projects/estacion-clima/index.html">
+                <img src="/assets/img/weather-icon.svg" alt="">
+            </a>
+            <a href="/assets/projects/gen-contrasena/index.html">
+                <img src="/assets/img/lock-icon.svg" alt="">
+            </a>
+            <a href="/assets/projects/generador-enlaces/index.html">
+                <img src="/assets/img/link-icon.svg" alt="" class="cross-icon">
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Generador de contraseñas</h2>
+
+        <div class="input-group">
+            <label for="length">Longitud (12 - 50):</label>
+            <!-- input numérico con mínimo y máximo -->
+            <input type="number" id="length" min="12" max="50" value="12">
+        </div>
+
+        <button onclick="generarPassword()">Generar Contraseña</button>
+
+        <div class="result-box">
+            <!-- input readonly para mostrar el resultado -->
+            <input type="text" id="passwordResult" readonly placeholder="Tu contraseña aparecerá aquí">
+        </div>
+    </div>
+
+    <script src="/assets/projects/gen-contrasena/generator.js"></script>
+    <script src="/main.js"></script>
+</body>
+
+</html>
