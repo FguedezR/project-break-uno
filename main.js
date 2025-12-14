@@ -23,7 +23,7 @@ function cambiarFondo() {
   // La sintaxis CSS es: background-image: url('...');
   document.body.style.backgroundImage = `url('${imagenSeleccionada}')`;
 
-  console.log("prueba de: " + indiceAleatorio);
+  // console.log("prueba de: " + indiceAleatorio);
 }
 
 cambiarFondo();
