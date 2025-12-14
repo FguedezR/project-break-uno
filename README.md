@@ -50,4 +50,4 @@ El proyecto sigue una estructura organizada para separar los recursos y los sub-
         ├── estacion-clima/
         ├── gen-contrasena/
         ├── generador-enlaces/
-          └── reloj-digital/
+        └── reloj-digital/
